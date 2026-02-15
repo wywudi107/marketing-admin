@@ -1,0 +1,32 @@
+{
+  "database": {
+    "host": "novax-db.c9aggikuoa5e.ap-southeast-1.rds.amazonaws.com",
+    "port": 3306,
+    "user": "admin",
+    "password": "b73UL4pmVeS6gSB",
+    "database": "game_hall",
+    "charset": "utf8mb4",
+    "pool_size": 10,
+    "max_overflow": 20,
+    "pool_recycle": 3600
+  },
+  "redis": {
+    "host": "redis.novax.inc",
+    "port": 6379,
+    "db": 0,
+    "password": "KRUxkewke1g6dsnB",
+    "decode_responses": true,
+    "max_connections": 50
+  },
+  "jwt": {
+    "secret_key": "0b6fe0ec96b93da940420d65bda9de8a437abf4b69e13b190a70fd1811d43546",
+    "algorithm": "HS256",
+    "expire_hours": 8
+  },
+  "app": {
+    "host": "0.0.0.0",
+    "port": 8002,
+    "debug": true,
+    "cors_origins": ["*"]
+  }
+}
