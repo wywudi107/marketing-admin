@@ -48,11 +48,17 @@ app.add_middleware(
 )
 
 # 注册路由
-from app.api import auth, admin, log
+from app.api import auth, admin, log, first_recharge, daily_stats, telemarketer_stats, telemarketer_bank_card, system_setting, settlement
 
 app.include_router(auth.router, tags=["认证"])
 app.include_router(admin.router, tags=["管理员管理"])
 app.include_router(log.router, tags=["操作日志"])
+app.include_router(first_recharge.router, tags=["首充列表"])
+app.include_router(daily_stats.router, tags=["每日统计"])
+app.include_router(telemarketer_stats.router, tags=["电销人员统计"])
+app.include_router(telemarketer_bank_card.router, tags=["电销人员银行卡"])
+app.include_router(system_setting.router, tags=["参数设置"])
+app.include_router(settlement.router, tags=["结算管理"])
 
 
 @app.get("/health", summary="健康检查")
